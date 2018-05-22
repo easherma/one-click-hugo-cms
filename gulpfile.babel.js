@@ -2,6 +2,7 @@ import gulp from "gulp";
 import cp from "child_process";
 import gutil from "gulp-util";
 import postcss from "gulp-postcss";
+import sass from "gulp-sass";
 import cssImport from "postcss-import";
 import cssnext from "postcss-cssnext";
 import BrowserSync from "browser-sync";
@@ -26,12 +27,14 @@ gulp.task("build", ["css", "js", "cms-assets", "hugo"]);
 gulp.task("build-preview", ["css", "js", "cms-assets", "hugo-preview"]);
 
 gulp.task("css", () => (
-  gulp.src("./src/css/*.css")
-    .pipe(postcss([
-      cssImport({from: "./src/css/main.css"}),
-      cssnext(),
-      cssnano(),
-    ]))
+  gulp.src("./src/css/*.scss")
+    .pipe(sass().on('error', sass.logError))
+    .pipe(postcss([cssnext(),cssnano()]))
+    //   postcss([
+    //   cssImport({from: "./src/css/main.css"}),
+    //   cssnext(),
+    //   cssnano(),
+    // ]))
     .pipe(gulp.dest("./dist/css"))
     .pipe(browserSync.stream())
 ));
