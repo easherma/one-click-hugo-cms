@@ -14,6 +14,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "angled-edges": "^2.0.0",
     "babel-eslint": "^6.1.2",
     "babel-loader": "^6.2.4",
     "babel-plugin-syntax-object-rest-spread": "^6.13.0",
@@ -55,6 +56,8 @@
     "gulp-sass": "^4.0.1",
     "gulp-svgmin": "^1.2.3",
     "gulp-svgstore": "^6.1.0",
+    "postcss-easy-import": "^3.0.0",
+    "postcss-sass": "^0.3.2",
     "svg-sprite-loader": "^0.1.2"
   }
 }
