@@ -13,7 +13,7 @@ import svgmin from "gulp-svgmin";
 import inject from "gulp-inject";
 import cssnano from "cssnano";
 import easyImport from "postcss-easy-import";
-import postcssSass from "postcss-sass";
+import postcssSass from "postcss-sass"
 
 const browserSync = BrowserSync.create();
 const hugoBin = `./bin/hugo.${process.platform === "win32" ? "exe" : process.platform}`;
@@ -32,7 +32,8 @@ gulp.task("css", () => (
   gulp.src("./src/css/*.scss")
     .pipe(sass().on('error', sass.logError))
     .pipe(postcss([
-      easyImport({from: "./src/css/_main.scss"}),
+      easyImport(),
+      cssImport({from: "./src/css/main.css"}),
       cssnext(),
       cssnano(),
     ]))

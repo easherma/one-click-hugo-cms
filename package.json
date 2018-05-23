@@ -52,6 +52,7 @@
     "whatwg-fetch": "^1.0.0"
   },
   "devDependencies": {
+    "angled-border-edges": "^1.0.1",
     "gulp-inject": "^4.2.0",
     "gulp-sass": "^4.0.1",
     "gulp-svgmin": "^1.2.3",

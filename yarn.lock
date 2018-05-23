@@ -90,6 +90,10 @@ amdefine@>=0.0.4:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/amdefine/-/amdefine-1.0.1.tgz#4a5282ac164729e93619bcfd3ad151f817ce91f5"
 
+angled-border-edges@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/angled-border-edges/-/angled-border-edges-1.0.1.tgz#b384a615109a5861747b3e2ae3048a987b8aa117"
+
 angled-edges@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/angled-edges/-/angled-edges-2.0.0.tgz#8a91a4efe81f2728b53d7d835c1f86f2a2148ffe"

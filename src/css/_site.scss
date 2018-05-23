@@ -123,10 +123,86 @@ body {
    -webkit-font-smoothing: antialiased;
 }
 
+/* colors */
+$warmwhite: #F5F1F1;
+$half-baked: #8FCABB;
+$forest-green: #33B42A;
+$saffron: #F9D342;
+$mirage: #131D29;
+$white: rgba(255, 255, 255, 1);
+
+// Angled border Classes
+// .angle--bottom-left {
+//   @include angled-edge( 2, 'bottom', 'left');
+// }
+//
+// .angle--bottom-right {
+//   @include angled-edge( 2, 'bottom','right');
+// }
+//
+// .angle--top-left {
+//   @include angled-edge( 2, 'top', 'left');
+// }
+//
+// .angle--top-right {
+//   @include angled-edge( 2, 'top','right');
+// }
 
 
-.about {
 
-	@include angled-edge('outside bottom', 'lower right', #c14c4c);
+.angled-bottom-right {
+	opacity: .99;
 
+	@include angled-edge('outside bottom', 'lower right', $saffron);
+
+}
+
+.angled-bottom-left {
+
+	@include angled-edge('outside bottom', 'lower left', $half-baked);
+
+}
+
+.angled-top-right {
+
+	@include angled-edge('outside top', 'upper left', $half-baked);
+
+}
+
+// .angle--top-left {
+//   clip-path: polygon(0 0, 100% 0, 100% 60%, 0 100%);
+// }
+
+.card {
+  width: auto;
+  height: auto;
+  overflow: hidden;
+  padding: 0 1.7rem;
+  background: $warmwhite;
+  padding:40px;
+  margin-top: 3em;
+  transition: max-height 0.25s;
+
+  &:hover {
+    .bio {
+      // display: inherit;
+      max-height: 800px;
+      transition: max-height 0.25s;
+    }
+    .roles {
+      display: none;
+    }
+  }
+
+  .bio {
+    position: relative;
+    bottom: 0;
+    overflow: hidden;
+    // display: none;
+    max-height: 0px;
+    left: auto;
+    z-index: 1;
+    background-color: light;
+    // box-shadow: 0 19px 38px rgba($black, 0.3), 0 15px 12px rgba($black, 0.2);
+  }
 }
